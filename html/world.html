@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+		
+</head>
+	<style>
+		rect:hover {fill: black;}
+	</style>
+	
+<body>
+	
+	<div id="myDiv"></div>
+	
+</body>
+	
+</html>
+
+<script>
+	
+	d3.csv("../dataset/temperature_data.csv").then(function(data){
+		console.log(data);
+		
+		let svgContainer = d3.select("#myDiv").append("svg")
+			.attr("width", 800)
+			.attr("height", 800);
+		
+			
+		//Generate Rectangle for Bar Chart
+		let  myRectangle = svgContainer.selectAll("rect")
+			.data(data);
+		
+		myRectangle.enter()
+			.append("rect")
+				//Start of Transition
+				.attr("fill", "black")
+				.attr("x", function(d,i){
+					return 50 + (i * 41); //------set space between bars
+				})
+				.attr("y", 300)
+				.attr("width", 40)
+				
+				//Transition
+				.transition()
+				.duration(2000)
+				//Finish of transition
+				
+				.attr("x", function(d,i){
+					return 50 + (i * 41); //------set space between bars
+				})
+				.attr("y", function(d){
+					return 300 - d.temp * 10;
+				})
+				.attr("width", 40) 		  //------set bars width
+				.attr("height", function(d){
+					return d.temp * 10;
+				})
+				.attr("fill", function(d){
+					if (d.temp <= 10) {return "blue";}
+					else if (d.temp <= 15) {return "green";}
+					else if (d.temp <= 20) {return "orange";}
+					else if (d.temp <= 30) {return "red";}
+					else  {return "black";}
+				});
+		
+
+
+		//Add label text for Bar Chart
+		let  mylabel = svgContainer.selectAll("text")
+			.data(data);
+
+		mylabel.enter()
+			.append("text")
+				
+				// Start of FIRST Label Transition
+				.attr("x", function(d,i){
+					return 70 + (i * 41);
+				})
+				.attr("y", 300)
+				
+				//Transition settings
+				.transition()
+				.duration(3000)
+				.delay(1000)
+				.ease(d3.easeLinear)
+				//Ending transition for Labels
+
+				.attr("x", function(d,i){
+					return 70 + (i * 41);
+				})
+				.attr("y", function(d){
+					return 320 - d.temp * 10;
+				})
+				.attr("text-anchor", "middle")
+				.attr("font-family", "sans-serif")
+				.attr("font-size", "20px")
+				.attr("fill", "white")
+				.text(function(d){
+					return d.temp + "\u00B0";
+				})
+
+//---------------------------------------------------------------
+
+				//Transition settings
+				.transition()
+				.duration(3000)
+				.delay(function(d, i){
+					return i * 400;
+				})
+				.ease(d3.easeBounceOut)
+				//Ending transition for Labels
+
+				.attr("x", function(d,i){
+					return 70 + (i * 41);
+				})
+				.attr("y", 310)
+				.attr("text-anchor", "middle")
+				.attr("font-family", "sans-serif")
+				.attr("font-size", "9px")
+				.attr("fill", "black")
+				.text(function(d){
+					return d.month;
+				});
+
+	})
+	
+</script>
