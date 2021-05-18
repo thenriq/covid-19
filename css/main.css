@@ -1,0 +1,75 @@
+/*Menu Source: https://www.youtube.com/watch?v=RzctM_ZXWAo&t=781s*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ul, ol, li{
+    list-style: none;
+}
+
+/*set color, width, height and font for nav menu, which will be the main menu bar*/
+body{
+    background-color: #dfe4e6;
+    font-family: "Open Sans", sans-serif;
+    /*position: relative;*/
+    padding-bottom: 58px;
+    /*min-height: 100vh;*/
+    /*background-image: url("../img/covid-banner.jpg");
+    opacity: 0.2;*/
+}
+
+header{
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+header p{
+    font-size: 22px;
+}
+
+
+main{
+    width: 90vw;
+    margin: 0 auto;
+    padding:  30px 20px 20px 20px;
+    max-width: 1000px;
+    margin-bottom: 100px;
+    line-height: 1.64;
+    text-rendering: optimizeLegibility;
+    text-align: justify;
+    word-break: break-word;
+    font-size: 18px;
+    
+    
+    /*min-height: calc(100vh - 211px - 58px);*/
+}
+
+
+
+
+/*Change bar charts to black on mouse hover on page "Statistics_data.html*/
+rect:hover {
+    fill: black;
+}
+
+footer{
+    text-align: center;
+    background-color: #FF2F2F;
+    
+    
+   /* position: absolute; /* apply to covid page*/
+    position: fixed;
+    bottom: 0; /* apply to covid page*/
+    width: 100% /* apply to covid page*/
+}

@@ -1,0 +1,66 @@
+
+#customize{
+    position: relative;
+    
+    /*float: right;*/
+    right:0%;
+    /*background-color: ivory;*/
+    /*border: 1px solid black;*/
+    font-size: 0.8rem;
+    
+}
+
+#customize > input{
+    border-radius: 5px;
+    outline: 0;
+    height: 25px;
+    padding: 5px;
+}
+
+
+#customize > button:hover{
+    background-color:black;
+    color: whitesmoke;
+    text-decoration: bold;
+}
+
+#customize > label{
+    
+    width: 100%;
+    color: rgb(75, 75, 75);
+    display: block;
+}
+
+/*Color and styling for DRAW CHART buttons on Statistics_data.html page*/
+#chart_options_csv>button{
+    padding: 15px;
+    display: block;
+    margin-top: 5px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+  
+}
+
+#chart_options_csv > button:hover{
+    background-color: #fff;
+    color: #222;
+}
+
+#chart_options_array>div>button{
+    padding: 15px;
+    display: block;
+    margin-top: 5px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+
+}
+
+#chart_options_array > div>button:hover{
+    background-color: #fff;
+    color: #222;
+}
+
