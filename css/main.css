@@ -1,12 +1,12 @@
-/*Menu Source: https://www.youtube.com/watch?v=RzctM_ZXWAo&t=781s*/
 
+/*Resetting default browsers*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/*Reseting list values*/
 ul, ol, li{
     list-style: none;
 }
@@ -15,13 +15,10 @@ ul, ol, li{
 body{
     background-color: #dfe4e6;
     font-family: "Open Sans", sans-serif;
-    /*position: relative;*/
     padding-bottom: 58px;
-    /*min-height: 100vh;*/
-    /*background-image: url("../img/covid-banner.jpg");
-    opacity: 0.2;*/
 }
 
+/*Style for text, background color, text color and padding for header in all pages*/
 header{
     text-align: center;
     background-color: #333;
@@ -29,16 +26,18 @@ header{
     padding: 20px;
 }
 
+/*Applying font and marging style for header "h1"*/
 header h1{
     font-size: 40px;
     margin-bottom: 30px;
 }
 
+/*Applying font style for "p"*/
 header p{
     font-size: 22px;
 }
 
-
+/*styling items on main section for all pages*/
 main{
     width: 90vw;
     margin: 0 auto;
@@ -50,9 +49,6 @@ main{
     text-align: justify;
     word-break: break-word;
     font-size: 18px;
-    
-    
-    /*min-height: calc(100vh - 211px - 58px);*/
 }
 
 
@@ -63,13 +59,11 @@ rect:hover {
     fill: black;
 }
 
+/*applying color red for footer to matches with covid logo */
 footer{
     text-align: center;
     background-color: #FF2F2F;
-    
-    
-   /* position: absolute; /* apply to covid page*/
     position: fixed;
-    bottom: 0; /* apply to covid page*/
-    width: 100% /* apply to covid page*/
+    bottom: 0; 
+    width: 100% 
 }

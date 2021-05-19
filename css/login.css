@@ -1,13 +1,15 @@
+/*padding for main section on login page*/
 .main{
     padding-top: 40px;
 }
 
+/*style for body section on login page*/
 body{
     background: #f0f0f0;
     font-family: sans-serif;
 }
 
-
+/*creating and styling a "card" section for the login page*/
 .card{
     
     width: 400px;
@@ -17,21 +19,24 @@ body{
     padding: 30px;
     border-radius: 5px;
 }
-
+/*aligning text on top section in the login page*/
 .card-top{
     text-align: center;
 }
 
+/*defining marging for all fields*/
 .card-group{
     margin-bottom: 10px;
 }
 
+/*styling text for label "EMAIL"*/
 .card-group > label{
     width: 100%;
     color: rgb(75, 75, 75);
     display: block;
 }
 
+/*styling input field email*/
 .card-group > input{
     border-radius: 5px;
     outline: 0;
@@ -40,6 +45,7 @@ body{
     padding: 5px;
 }
 
+/*styling button "enter" on login page*/
 .card-group > button{
     background-image: linear-gradient(to right,#3385ff, #031836);
     width: 100%;
@@ -50,16 +56,19 @@ body{
     outline: 0;
 }
 
+/*styling button "enter" with change color on hover*/
 .btn button:hover{
     background-image: linear-gradient(to right, #dc3545, #38080d);
 }
 
+/*styling image on login page*/
 .imgLogin{
     border-radius: 100px;
     width: 100px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.904);
 }
 
+/*changing color of title in login page*/
 .title{
     color:tomato;
 }

@@ -1,37 +1,36 @@
-
+/*general settings for customize class*/
 #customize{
     position: relative;
-    
-    /*float: right;*/
     right:0%;
-    /*background-color: ivory;*/
-    /*border: 1px solid black;*/
     font-size: 0.8rem;
+    
     
 }
 
+/*apply style to input color box on pages "index", "symptoms" and "prevention"*/
 #customize > input{
     border-radius: 5px;
     outline: 0;
     height: 25px;
-    padding: 5px;
+    
 }
 
-
+/*Apply style to button on mouse hover*/
 #customize > button:hover{
     background-color:black;
     color: whitesmoke;
     text-decoration: bold;
+    
 }
 
+/*Apply style to label*/
 #customize > label{
-    
     width: 100%;
-    color: rgb(75, 75, 75);
+    color: whitesmoke;
     display: block;
 }
 
-/*Color and styling for DRAW CHART buttons on Statistics_data.html page*/
+/*Color and styling for DRAW CHART buttons on Statistics_data.html page (Total Worldwide cases)*/
 #chart_options_csv>button{
     padding: 15px;
     display: block;
@@ -43,11 +42,13 @@
   
 }
 
+/*Changing color on mouse hover*/
 #chart_options_csv > button:hover{
     background-color: #fff;
     color: #222;
 }
 
+/*Color and styling for DRAW CHART buttons on Statistics_data.html page (Totals in Ireland)*/
 #chart_options_array>div>button{
     padding: 15px;
     display: block;
@@ -59,6 +60,7 @@
 
 }
 
+/*Changing color on mouse hover*/
 #chart_options_array > div>button:hover{
     background-color: #fff;
     color: #222;
